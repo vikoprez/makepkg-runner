@@ -33,12 +33,19 @@ jobs:
       #     pkgbuild-directory: $HOME
       #     target-directory: $HOME/packages
 
-      - name: Build ArchLinux Packages
-        # You may pin to the exact commit or the version.
-        # uses: zjuyk/pkgbuild-aur@a660603570d1d8e2f4a40f36065f59b5bd474b03
-        uses: zjuyk/pkgbuild-aur@v1.0
-        with:
-          # ArchLinux package name to build
-          pkg-name: fjordlauncherunlocked
-          
-                
+      # - name: Build ArchLinux Packages
+      #   # You may pin to the exact commit or the version.
+      #   # uses: zjuyk/pkgbuild-aur@a660603570d1d8e2f4a40f36065f59b5bd474b03
+      #   uses: zjuyk/pkgbuild-aur@v1.0
+      #   with:
+      #     # ArchLinux package name to build
+      #     pkg-name: fjordlauncherunlocked
+
+      - name: Arch makepkg
+      # You may pin to the exact commit or the version.
+      # uses: py7hon/arch-makepkg@9891e6a52a6f5e2d1729f650198628a19ae261b4
+        uses: py7hon/arch-makepkg@v0.0.2
+        # with:
+          # Path to directory containing PKGBUILD file
+          # path: # default is 
+              
