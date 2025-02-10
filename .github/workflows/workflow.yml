@@ -25,7 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Arch Linux's package action
+      - name: Build Arch Linux Package
         # You may pin to the exact commit or the version.
-        # uses: heyhusen/archlinux-package-action@e58b41611995a1f64a4c8ffc1413418dc3a14160
-        uses: heyhusen/archlinux-package-action@v2.2.1
+        # uses: Menci/build-archlinux-package@2bf49233cc85786df75aa750e1d6c994e534395d
+        uses: Menci/build-archlinux-package@beta-v1
+        with:
+          pkgbuild-directory: $HOME
+          target-directory: $HOME/packages
+                
