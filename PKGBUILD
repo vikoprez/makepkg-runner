@@ -63,11 +63,6 @@ check() {
 }
 
 package() {
-  # licenses
-  install -Dm644 lionshead.license -t "$pkgdir"/usr/share/licenses/$pkgname/
-  install -Dm644 batch.license -t "$pkgdir"/usr/share/licenses/$pkgname/
-  install -Dm644 mdi.license -t "$pkgdir"/usr/share/licenses/$pkgname/
-
   cd FjordLauncher-$pkgver/build
   DESTDIR="$pkgdir" cmake --install .
 
